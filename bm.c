@@ -13,7 +13,7 @@ static void ok(BM b, size_t i) {
     return;
   fprintf(stderr,"bitmap index out of range\n");
   exit(1);
-}         
+}
 
 extern BM bmcreate(size_t bits) {
   size_t bytes=bits2bytes(bits);
