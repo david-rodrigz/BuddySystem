@@ -1,5 +1,8 @@
 // A baddr bitmap, for the Buddy System.
-
+/**
+ * This is a block address (baddr) bitmap that is used 
+ * to manage memory in the Buddy System.
+*/
 #ifndef BBM_H
 #define BBM_H
 
@@ -7,6 +10,11 @@
 
 typedef void *BBM;
 
+/**
+ * Creates a baddr bitmap of size bytes, given 
+ * the size of memory and the exponent e of the 
+ * block size 2^e.
+*/
 extern BBM  bbmcreate(size_t size, int e);
 extern void bbmdelete(BBM b);
 
