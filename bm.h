@@ -22,12 +22,38 @@ typedef void *BM;
  * the allocated memory.
 */
 extern BM   bmcreate(size_t bits);
+
+/**
+ * Deletes the specified bitmap and frees the
+ * memory that was allocated for it.
+*/
 extern void bmdelete(BM b);
 
+/**
+ * Sets the specified bit in the bitmap. The 
+ * bit index must be less than the number of 
+ * bits in the bitmap.
+*/
 extern void bmset(BM b, size_t i);
+
+/**
+ * Clears the specified bit in the bitmap. The
+ * bit index must be less than the number of
+ * bits in the bitmap.
+*/
 extern void bmclr(BM b, size_t i);
+
+/**
+ * Tests the specified bit in the bitmap. The
+ * bit index must be less than the number of
+ * bits in the bitmap.
+*/
 extern int  bmtst(BM b, size_t i);
 
+/**
+ * Prints the specified bitmap to the standard
+ * output in hexadecimal format.
+*/
 extern void bmprt(BM b);
 
 #endif
