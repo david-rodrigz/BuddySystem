@@ -7,10 +7,10 @@ typedef void *Balloc;
  * Creates a memory allocator given the total 
  * number of bytes that can be allocated 
  * (size), The l (lower) argument specifies 
- * that the smallest allocation will be 2l 
+ * that the smallest allocation will be 2^l 
  * bytes, even if a smaller amount is 
  * requested. The u (upper) argument specifies 
- * that the largest allocation will be 2u 
+ * that the largest allocation will be 2^u 
  * bytes; a larger request will fail.
 */
 extern Balloc bcreate(unsigned int size, int l, int u);

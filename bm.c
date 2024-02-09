@@ -16,13 +16,25 @@ static void ok(BM b, size_t i) {
 }
 
 extern BM bmcreate(size_t bits) {
+  // get the number of bytes needed to store the bits
   size_t bytes=bits2bytes(bits);
+
+  // map a block of memory of size bytes and store the number of bits at the beginning
+  // p is a pointer to the beginning of the memory block
   size_t *p=mmalloc(sizeof(size_t)+bytes);
   if ((long)p==-1)
     return 0;
+  
+  // store the number of bits at the beginning of the memory block
   *p=bits;
+
+  // increment p to point to the beginning of the bitmap
+  // b is a pointer to the beginning of the memory block
   BM b=++p;
+
+  // set all bytes to 0 (clear the bitmap)
   memset(b,0,bytes);
+  
   return b;
 }
 

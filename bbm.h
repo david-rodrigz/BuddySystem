@@ -13,7 +13,8 @@ typedef void *BBM;
 /**
  * Creates a baddr bitmap of size bytes, given 
  * the size of memory and the exponent e of the 
- * block size 2^e.
+ * smallest block size 2^e. Returns a pointer to
+ * the bitmap.
 */
 extern BBM  bbmcreate(size_t size, int e);
 extern void bbmdelete(BBM b);

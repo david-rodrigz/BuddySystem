@@ -3,17 +3,12 @@
 #include "utils.h"
 
 /**
- * Determines the number of “buddy” pairs (i.e. 
- * the size) of a baddr bitmap given the size 
- * of memory and the exponent e of the block 
- * size 2^e.
+ * Determines how many of the smallest blocks 
+ * can fit in the memory of the given size.
 */
 static size_t mapsize(size_t size, int e) {
-  // Determine block size (2 to the power of e)
   size_t blocksize=e2size(e);
-  // Calculate number of "buddy" blocks that can fit in the memory
   size_t blocks=divup(size,blocksize);
-  // Calculate the number of pairs of blocks (or "buddies") needed
   size_t buddies=divup(blocks,2);
   return buddies;
 }

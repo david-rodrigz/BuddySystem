@@ -1,4 +1,4 @@
-prog=deq
+prog=balloc
 
 include ../GNUmakefile
 

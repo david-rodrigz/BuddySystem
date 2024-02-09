@@ -19,7 +19,8 @@ typedef void *BM;
  * Creates a bitmap with the specified number 
  * of bits and initializes all bits to 0. The 
  * number of bits is stored at the beginning of 
- * the allocated memory.
+ * the allocated memory. Returns a pointer to
+ * the beginning of the bitmap.
 */
 extern BM   bmcreate(size_t bits);
 
