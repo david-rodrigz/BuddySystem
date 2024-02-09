@@ -3,7 +3,6 @@
 #include "freelist.h"
 #include "balloc.h"
 
-
 // Test case 1: Basic allocation and deallocation
 void test_basic_allocation() {
     Balloc allocator = bcreate(1024, 0, 10);
@@ -55,9 +54,9 @@ void test4() {
 
 // Main function to run all tests
 int main() {
-    // test_basic_allocation();
-    // test_allocation_upper_bound();
-    // test_size_retrieval();
+    test_basic_allocation();
+    test_allocation_upper_bound();
+    test_size_retrieval();
     test4();
     return 0;
 }
